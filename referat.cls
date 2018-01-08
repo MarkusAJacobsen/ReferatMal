@@ -8,32 +8,34 @@
 \def\referatnumber#1{\def\@referatnumber{#1}}
 
 \RequirePackage{fancyhdr}
-\LoadClass[twocolumn]{article}
+\LoadClass{article}
 \RequirePackage[compact]{titlesec}
 \RequirePackage{xcolor}
 \definecolor{slcolor}{HTML}{555555}
 \usepackage[utf8]{inputenc} % for PCs
 
 \renewcommand{\maketitle}{%
-	\twocolumn[%
-	\fontsize{40}{60}\fontfamily{phv}\fontseries{b}%
+%	\twocolumn[%
+{	\fontsize{40}{60}\fontfamily{phv}\fontseries{b}%
 	\fontshape{sc}\selectfont\headlinecolor
 	\@title \space\renewcommand{\maketitle}{%
-		\twocolumn[%
+%		\twocolumn[%
 		\fontsize{50}{60}\fontfamily{phv}\fontseries{b}%
 		\fontshape{sl}\selectfont\headlinecolor
 		\@title
 		\medskip
-		]%
+%		]%
 	}
  \rule{4 pt}{25 pt} 
  \fontsize{20}{40}\fontfamily{phv}\fontseries{m}\selectfont\textcolor{slcolor}{\@referattype - \#\@referatnumber}
+ 	\vspace{0.2cm}
  	
- 	\fontsize{15}{30}\selectfont \space NTNU Gjøvik - \@date \\
+ 	\space \fontsize{15}{30}\selectfont \space NTNU Gjøvik - \@date \\
 	\medskip
 	\\
 	\thispagestyle{empty}
-	]%
+%	]%
+}
 }
 
 
